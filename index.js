@@ -1,10 +1,10 @@
-var transformer = require('dat-transformer');
-var tBuffer = transformer('buffer');
-var tIpAddress = transformer('ip-address');
+var Conversion = require('transformer-conversion');
+var tBuffer = require('transformer.buffer');
+var tIpAddress = require('transformer.ip-address');
 // require any other modules you may need here.
 var ip = require('ip');
 
-module.exports = transformer.Conversion(tBuffer, tIpAddress, convert);
+module.exports = Conversion(tBuffer, tIpAddress, convert);
 
 // this is a synchronous conversion.
 function convert(input) {
